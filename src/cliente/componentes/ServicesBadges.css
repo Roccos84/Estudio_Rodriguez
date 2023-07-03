@@ -1,0 +1,33 @@
+.badges {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+}
+
+.badges h2 {
+    padding-bottom: 5%;
+}
+
+.badges h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.badges a {
+    display: flex;
+    align-self: flex-start;
+    padding-left: 9%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: black;
+}
+
+.badges a:hover {
+    color: #b98400;
+}

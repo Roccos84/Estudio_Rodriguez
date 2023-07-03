@@ -1,0 +1,9 @@
+.animatedText {
+    position: absolute;
+    z-index: 1;
+    color: black;
+}
+
+.slider {
+    background-color: goldenrod;
+}
