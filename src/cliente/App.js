@@ -20,11 +20,11 @@ function App() {
         <h2 className='mensaje'>CONTANDI LTDA. más de {new Date().getFullYear() - 1978} de años al servicio de nuestros clientes.
         </h2>
       </div>
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
       <Nosotros />
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
       <Servicios />
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
       <Contacto />
 
     </div>

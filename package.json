@@ -14,12 +14,13 @@
     "react-awesome-reveal": "^4.2.3",
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-icons": "^4.10.1",
     "react-moving-text": "^0.0.7",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^4.0.3",
     "semantic-ui-react": "^2.1.4",
-    "styled-components": "^6.0.0-rc.5",
-    "sweetalert2": "^11.7.12"
+    "styled-components": "^5.3.11",
+    "sweetalert2": "^11.4.8"
   },
   "scripts": {
     "start": "react-scripts start",

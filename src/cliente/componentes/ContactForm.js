@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import './ContactForm.css';
 
 function ContactForm() {
+    const captcha = useRef(null);
+    const [botonActivo, setBotonActivo] = useState(false);
     const [formData, setFormData] = useState({
         nombre: '',
         email: '',
@@ -15,6 +18,7 @@ function ContactForm() {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
+
 
         try {
             const response = await fetch('http://localhost:3001/api/send-email', {
@@ -33,6 +37,8 @@ function ContactForm() {
                     email: '',
                     mensaje: ''
                 });
+
+                window.grecaptcha.reset();
                 // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
             } else {
                 console.error('Error al enviar el correo electrónico');
@@ -44,22 +50,35 @@ function ContactForm() {
         }
     };
 
+
+    const onChange = () => {
+        if (captcha.current.getValue()) {
+            setBotonActivo(true);
+        }
+    }
+
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Nombre:
-                <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
-            </label>
-            <label>
-                Email:
-                <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </label>
-            <label>
-                Mensaje:
-                <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} />
-            </label>
-            <button type="submit">Enviar</button>
-        </form>
+        <div className="formulario">
+
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="nombre" placeholder='Nombre' value={formData.nombre} onChange={handleChange} />
+                <input type="email" name="email" placeholder='Email (requerido)' value={formData.email} onChange={handleChange} required />
+                <textarea name="mensaje" placeholder='Mensaje (requerido)' value={formData.mensaje} onChange={handleChange} required />
+                <div className='recaptchaContainer'>
+                    <ReCAPTCHA
+                        ref={captcha}
+                        sitekey="6LesGPYmAAAAAK4hop2BoZaYL2uv7RWw4Vsde7xF"
+                        onChange={onChange}
+                        size="normal"
+                    />
+                </div>
+                {botonActivo ? (<button className='activeButton' type="submit" >ENVIAR</button>) : (<button className='inactiveButton' disabled>ENVIAR</button>)}
+
+
+
+            </form>
+
+        </div>
     );
 }
 
