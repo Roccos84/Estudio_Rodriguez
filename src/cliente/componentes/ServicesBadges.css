@@ -11,6 +11,7 @@
 
 .badges h2 {
     padding-bottom: 5%;
+    margin-top: -4%;
 }
 
 .badges h4 {
@@ -30,4 +31,14 @@
 
 .badges a:hover {
     color: #b98400;
+}
+
+@media screen and (max-width: 790px) {
+    .badges {
+        margin-bottom: 5%;
+    }
+
+    .badges h2 {
+        font-size: 22px;
+    }
 }

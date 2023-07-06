@@ -36,9 +36,25 @@
     border-radius: 20px;
 }
 
+@media screen and (max-width: 890px) {
+    .glassContainer {
+        width: 90%;
+    }
 
-@media screen and (max-width: 720px) {
-    .glass {
+    .nosotrosRedaccion {
+        padding: 2% 3% 3%;
+    }
+
+    .nosotrosContainer {
+        height: auto;
+        padding: 5%;
+    }
+
+
+}
+
+@media screen and (max-width: 781px) {
+    .glassContainer {
         width: 90%;
     }
 

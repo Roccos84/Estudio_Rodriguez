@@ -25,7 +25,7 @@
     align-items: center;
     text-align: center;
     grid-template-columns: repeat(2, auto);
-    column-gap: 15%;
+    column-gap: 10%;
 
 }
 
@@ -48,14 +48,20 @@ h4 {
 
 
 @media screen and (max-width: 840px) {
-    .badges:last-child {
-        margin-top: -20%;
+    .serviciosComp {
+        height: auto;
+    }
+
+    .placasServices {
+        height: auto;
+        margin: 10% 0 5%;
     }
 }
 
 @media screen and (max-width: 790px) {
     .placasServices {
         grid-template-columns: repeat(1, auto);
+        height: auto;
 
     }
 
@@ -64,7 +70,11 @@ h4 {
     }
 
     .serviciosTitulo {
-        margin-top: 3%;
+        margin-top: 0%;
         font-size: 23px;
+    }
+
+    .placasServices {
+        margin-top: 9%;
     }
 }

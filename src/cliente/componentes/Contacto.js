@@ -19,16 +19,16 @@ function Contacto() {
                 <div className="contactInfo">
 
                     <div className='contactLinks1'>
-                        <FontAwesomeIcon icon={faLocationDot} style={{ color: "#ffffff", }} />&nbsp;<a href='https://goo.gl/maps/rzBAeTqT15aUmfoB8' target="_blank">Avda. España 668, Maldonado (Uruguay)</a> <br />
+                        <FontAwesomeIcon icon={faLocationDot} style={{ color: "#ffffff", }} /><a href='https://goo.gl/maps/rzBAeTqT15aUmfoB8' target="_blank">Avda. España 668, Maldonado (Uruguay)</a> <br />
                     </div>
                     <div className='contactLinks'>
-                        <FontAwesomeIcon icon={faPhone} style={{ "--fa-primary-color": "#ffffff", "--fa-secondary-color": "#ffffff", }} />&nbsp;<a href='tel:+59842225782'>(+598) 42225782</a> <br />
+                        <FontAwesomeIcon icon={faPhone} style={{ "--fa-primary-color": "#ffffff", "--fa-secondary-color": "#ffffff", }} /><a href='tel:+59842225782'>(+598) 42225782</a> <br />
                     </div>
                     <div className='contactLinks'>
-                        <FontAwesomeIcon icon={faMobileScreen} style={{ color: "#ffffff", }} />&nbsp;<a href='https://wa.me/59892834934' target="_blank">(+598) 092834934</a> <br />
+                        <FontAwesomeIcon icon={faMobileScreen} style={{ color: "#ffffff", }} /><a href='https://wa.me/59892834934' target="_blank">(+598) 092834934</a> <br />
                     </div>
                     <div className='contactLinks4'>
-                        <FontAwesomeIcon icon={faEnvelope} />&nbsp;<a href="mailto:estudio@rodriguezyasociados.com.uy">estudio@rodriguezyasociados.com.uy</a> <br />
+                        <FontAwesomeIcon icon={faEnvelope} /><a href="mailto:estudio@rodriguezyasociados.com.uy">estudio@rodriguezyasociados.com.uy</a> <br />
                     </div>
 
                     {/* <div className='frame'>

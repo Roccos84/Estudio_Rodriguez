@@ -82,7 +82,7 @@ path:hover {
 
     .contactLinks1 a,
     .contactLinks4 a {
-        font-size: 16px;
+        font-size: 16.2px;
         line-height: 20px;
     }
 
@@ -105,23 +105,79 @@ path:hover {
     }
 
     .contactInfo {
-        margin-top: 5%;
+        margin: auto;
+        padding-left: 13%;
+        padding-top: 8%;
+        padding-bottom: 5%;
+    }
+
+    .titleContact {
+        margin-top: 2%;
+    }
+
+    .contactContainer {
+        height: auto;
+    }
+
+    .contactForm {
+        padding-bottom: 25px;
     }
 
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 660px) {
+
+    .contactInfo {
+        padding-top: 12%;
+    }
+
+}
+
+@media screen and (max-width: 553px) {
+
+    .contactLinks,
+    .contactLinks1,
+    .contactLinks4 {
+        margin-left: 2%;
+    }
+
+}
+
+@media screen and (max-width: 499px) {
+
+    .contactInfo {
+        padding-left: 10%;
+    }
+
+    .contactInfo a:nth-child(2) {
+        font-size: 17px;
+        line-height: 40px;
+    }
+
+    .contactLinks,
+    .contactLinks1,
+    .contactLinks4 {
+        font-size: 13px;
+    }
+
+    .titleContact {
+        font-size: 23px;
+    }
+
+}
+
+@media screen and (max-width: 394px) {
 
     .contactInfo {
         width: 400px;
-        margin-top: 5%;
+        margin-top: 6%;
         margin-left: 30px;
     }
 
     .contactLinks,
     .contactLinks1,
     .contactLinks4 {
-        margin-left: 0;
+        margin-left: 0%;
     }
 
     .contactInfo a,
@@ -137,14 +193,19 @@ path:hover {
     }
 
     .mascara {
-        width: 85%;
-        margin-left: 23px;
+        width: 90%;
+        margin-left: 17.5px;
         margin-top: 4vh;
     }
 
     .titleContact hr.solid {
         margin-top: 12%;
     }
+
+    .titleContact {
+        font-size: 23px;
+    }
+
 }
 
 /* .frame {
