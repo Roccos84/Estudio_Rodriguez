@@ -3,6 +3,7 @@ import { MenuItems } from './MenuItems';
 // import logo1 from '../../img/R&A-logo-01.png';
 import logo from '../../img/R&A-logo-01-V1.png';
 import './Navbar.css';
+import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
@@ -15,7 +16,7 @@ export default function Navbar() {
 
     return (
         <div className='NavbarItems'>
-            <img className="navbar-logo" src={logo} alt="Logo" />
+            <Link to="/"><img className="navbar-logo" src={logo} alt="Logo" /></Link>
             {/* <h1 className="navbar-logo">Logo <i className="fab fa-react"></i> </h1> */}
             <div className="menu-icon" onClick={handleClick}>
                 <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
@@ -23,14 +24,18 @@ export default function Navbar() {
             <ul className={clicked ? "nav-menu active" : "nav-menu"}>
                 {MenuItems.map((item, index) => {
                     return (
+
+
                         <li key={index}>
-                            <a href={item.url} className={item.nombreClase}>
+                            <Link className={item.nombreClase} to={item.url} >
                                 {item.titulo}
-                            </a>
+                            </Link>
+
                         </li>
                     )
                 })}
             </ul>
         </div>
+
     )
 }

@@ -12,20 +12,6 @@
   background-size: cover;
 }
 
-.mensaje {
-
-  padding: 4% 5% 4% 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.coso {
-  width: 100%;
-  /* height: 100vh; */
-}
-
 hr.solid {
   margin: auto;
   border-top: 1px solid #000;
