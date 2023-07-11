@@ -17,9 +17,3 @@ hr.solid {
   border-top: 1px solid #000;
   width: 90%;
 }
-
-@media screen and (max-width: 820px) {
-  .coso {
-    /* height: auto; */
-  }
-}

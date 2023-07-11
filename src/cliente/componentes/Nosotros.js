@@ -6,7 +6,7 @@ function Nosotros() {
 
 
     return (
-        <div className="nosotrosContainer">
+        <div className="nosotrosContainer" >
             <div className="glassContainer">
 
                 <p className='nosotrosTitulo'>QUIENES SOMOS...</p>
