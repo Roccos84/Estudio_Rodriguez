@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Servicios from './componentes/Servicios';
 import PantallaEnConst from './componentes/PantallaEnConst';
@@ -7,6 +7,7 @@ import Nosotros from './componentes/Nosotros';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './componentes/HomePage';
 import Navbar from './componentes/Navbar/Navbar';
+
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
         </Router>
       </div>
     </>
-    // 
+    ////////////////////////////////////////////////////
+
     //   {/* <div>
     //     <PantallaEnConst />
     //   </div> */}
