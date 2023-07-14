@@ -1,10 +1,8 @@
 import './HomePage.css';
 import Carrousel from './Carrousel';
-import Navbar from './Navbar/Navbar';
 import Nosotros from './Nosotros';
 import Servicios from './Servicios';
 import Contacto from './Contacto';
-import Footer from './Footer';
 
 export default function Home() {
 
@@ -19,7 +17,6 @@ export default function Home() {
             <Nosotros />
             <Servicios />
             <Contacto />
-            <Footer />
         </div>
     )
 }

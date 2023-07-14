@@ -1,8 +1,8 @@
 import './Carrousel.css';
 import { Carousel } from 'react-carousel-minimal';
-import Slide1 from '../img/firmadoc1.png';
-import Slide2 from '../img/mettingRoom1.png';
-import Slide3 from '../img/accountingServices1.png';
+import Slide1 from '../img/firmadoc1.webp';
+import Slide2 from '../img/mettingRoom1.webp';
+import Slide3 from '../img/accountingServices1.webp';
 
 function Carrousel() {
 

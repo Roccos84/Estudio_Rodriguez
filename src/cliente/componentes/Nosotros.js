@@ -1,9 +1,7 @@
 import './Nosotros.css';
 import React from 'react';
 
-
 function Nosotros() {
-
 
     return (
         <div className="nosotrosContainer" >

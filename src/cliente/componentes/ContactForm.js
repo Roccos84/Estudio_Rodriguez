@@ -1,6 +1,6 @@
+import './ContactForm.css';
 import React, { useState, useRef } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import './ContactForm.css';
 
 function ContactForm() {
     const captcha = useRef(null);
@@ -73,11 +73,13 @@ function ContactForm() {
 
     return (
         <div className="formulario">
-
             <form onSubmit={handleSubmit}>
-                <input type="text" name="nombre" placeholder='Nombre' value={formData.nombre} onChange={handleChange} />
-                <input type="email" name="email" placeholder='Email (requerido)' value={formData.email} onChange={handleChange} required />
-                <textarea name="mensaje" placeholder='Mensaje (requerido)' value={formData.mensaje} onChange={handleChange} required />
+                <label htmlFor="name"></label>
+                <input id='name' type="text" name="nombre" placeholder='Nombre' value={formData.nombre} onChange={handleChange} autoComplete="on" />
+                <label htmlFor="mail"></label>
+                <input id='mail' type="email" name="email" placeholder='Email (requerido)' value={formData.email} onChange={handleChange} required autoComplete="on" />
+                <label htmlFor="message"></label>
+                <textarea id='message' name="mensaje" placeholder='Mensaje (requerido)' value={formData.mensaje} onChange={handleChange} required />
                 <div className='recaptchaContainer'>
                     <ReCAPTCHA
                         ref={captcha}
@@ -87,8 +89,6 @@ function ContactForm() {
                     />
                 </div>
                 {botonActivo ? (<button className='activeButton' type="submit" >ENVIAR</button>) : (<button className='inactiveButton' disabled>ENVIAR</button>)}
-
-
 
             </form>
 
