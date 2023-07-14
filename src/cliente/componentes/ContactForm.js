@@ -11,6 +11,8 @@ function ContactForm() {
         mensaje: ''
     });
 
+    const endpoint = 'https://estudioservice.onrender.com';
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -21,14 +23,17 @@ function ContactForm() {
 
 
         try {
-            const response = await fetch('api/send-email', {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                mode: 'cors',
                 body: JSON.stringify(formData)
 
             });
+
+            console.log('LA RESPUESTA ES:', response)
 
             if (response.ok) {
                 console.log('Correo electrónico enviado exitosamente');
