@@ -27,50 +27,36 @@ function ContactForm() {
 
         try {
 
-            async function postData() {
+            const response = await fetch(endpoint, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: 'follow', // manual, *follow, error
+                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                body: JSON.stringify(formData) // body data type must match "Content-Type" header
 
-                const response = await fetch(endpoint, {
-                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                    mode: 'cors', // no-cors, *cors, same-origin
-                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                    credentials: 'same-origin', // include, *same-origin, omit
-                    headers: {
-                        'Content-Type': 'application/json'
-                        // 'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    redirect: 'follow', // manual, *follow, error
-                    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                    body: JSON.stringify(formData) // body data type must match "Content-Type" header
-                }).then(data => {
-                    console.log(data); // JSON data parsed by `data.json()` call
+            });
+
+
+            if (response.ok) {
+                console.log('Correo electrónico enviado exitosamente');
+                setFormData({
+                    nombre: '',
+                    email: '',
+                    mensaje: ''
                 });
-                return response.json(); // parses JSON response into native JavaScript objects
+
+                window.grecaptcha.reset();
+                // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
+            } else {
+                console.error('Error al enviar el correo electrónico');
+                // Maneja el error de envío de correo electrónico
             }
-
-            // const response = await fetch(endpoint, {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify(formData)
-
-            // });
-
-
-            // if (response.ok) {
-            //     console.log('Correo electrónico enviado exitosamente');
-            //     setFormData({
-            //         nombre: '',
-            //         email: '',
-            //         mensaje: ''
-            //     });
-
-            //     window.grecaptcha.reset();
-            //     // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
-            // } else {
-            //     console.error('Error al enviar el correo electrónico');
-            //     // Maneja el error de envío de correo electrónico
-            // }
 
         } catch (error) {
             console.error('Error en la solicitud de envío de correo electrónico', error);
