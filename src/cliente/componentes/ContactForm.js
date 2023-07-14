@@ -28,12 +28,11 @@ function ContactForm() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                mode: 'cors',
                 body: JSON.stringify(formData)
 
             });
+            console.log('LOS DATOS:', formData)
 
-            console.log('LA RESPUESTA ES:', response)
 
             if (response.ok) {
                 console.log('Correo electrónico enviado exitosamente');
