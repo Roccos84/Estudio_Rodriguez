@@ -17,37 +17,62 @@ function ContactForm() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+
+    async function postData(url = '', data = {}) {
+
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+    }
+
     const handleSubmit = async (e) => {
 
         e.preventDefault();
 
 
         try {
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
 
-            });
-            console.log('LOS DATOS:', formData)
-
-
-            if (response.ok) {
-                console.log('Correo electrónico enviado exitosamente');
-                setFormData({
-                    nombre: '',
-                    email: '',
-                    mensaje: ''
+            postData(url = endpoint, data = { formData })
+                .then(data => {
+                    console.log(data); // JSON data parsed by `data.json()` call
                 });
 
-                window.grecaptcha.reset();
-                // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
-            } else {
-                console.error('Error al enviar el correo electrónico');
-                // Maneja el error de envío de correo electrónico
-            }
+            // const response = await fetch(endpoint, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify(formData)
+
+            // });
+
+
+            // if (response.ok) {
+            //     console.log('Correo electrónico enviado exitosamente');
+            //     setFormData({
+            //         nombre: '',
+            //         email: '',
+            //         mensaje: ''
+            //     });
+
+            //     window.grecaptcha.reset();
+            //     // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
+            // } else {
+            //     console.error('Error al enviar el correo electrónico');
+            //     // Maneja el error de envío de correo electrónico
+            // }
+
         } catch (error) {
             console.error('Error en la solicitud de envío de correo electrónico', error);
             // Maneja el error de solicitud
