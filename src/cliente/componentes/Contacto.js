@@ -21,7 +21,7 @@ function Contacto() {
                         <FontAwesomeIcon icon={faLocationDot} style={{ color: "#ffffff", }} /><a href='https://goo.gl/maps/rzBAeTqT15aUmfoB8' target="_blank">Avda. España 668, Maldonado (Uruguay)</a> <br />
                     </div>
                     <div className='contactLinks'>
-                        <FontAwesomeIcon icon={faPhone} style={{ "--fa-primary-color": "#ffffff", "--fa-secondary-color": "#ffffff", }} /><a href='tel:+59842225782'>(+598) 42225782</a> <br />
+                        <FontAwesomeIcon icon={faPhone} style={{ "--fa-primary-color": "#ffffff", "--fa-secondary-color": "#ffffff", }} /><a href='tel:+59842225782'>(+598) 42224928</a> <br />
                     </div>
                     <div className='contactLinks'>
                         <FontAwesomeIcon icon={faMobileScreen} style={{ color: "#ffffff", }} /><a href='https://wa.me/59892834934' target="_blank">(+598) 092834934</a> <br />
