@@ -1,0 +1,100 @@
+.floating-button {
+    position: fixed;
+    /* Se mantiene fijo en la pantalla */
+    bottom: 100px;
+    /* Distancia desde el borde inferior */
+    right: 50px;
+    /* Distancia desde el borde derecho */
+    width: 49px;
+    /* Ancho del botón */
+    height: 49px;
+    /* Alto del botón */
+    border-radius: 50%;
+    /* Forma circular */
+    background-color: transparent;
+    /* Color de fondo del botón */
+    border: none;
+    /* Sin borde */
+    color: white;
+    /* Color del texto/icono */
+    font-size: 24px;
+    /* Tamaño del icono */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    cursor: pointer;
+    /* Cambiar cursor al pasar el mouse */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-button:hover {
+    background-color: #39ab63 !important;
+    /* Cambiar color al pasar el mouse */
+
+}
+
+@media screen and (max-width: 1076px) {
+
+    .contactLinks1 a,
+    .contactLinks4 a {
+        font-size: 16.2px;
+        line-height: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 875px) {
+    .floating-button {
+        bottom: 300px;
+        /* Distancia desde el borde inferior */
+        right: 40px;
+
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .floating-button {
+        bottom: 60px;
+        /* Distancia desde el borde inferior */
+        right: 40px;
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 553px) {
+
+    .floating-button {
+        bottom: 50px;
+        /* Distancia desde el borde inferior */
+        right: 20px;
+
+    }
+
+}
+
+@media screen and (max-width: 499px) {
+
+    .floating-button {
+        bottom: 50px;
+        /* Distancia desde el borde inferior */
+        right: 20px;
+
+    }
+
+}
+
+@media screen and (max-width: 394px) {
+
+    .floating-button {
+        bottom: 50px;
+        /* Distancia desde el borde inferior */
+        right: 30px;
+
+    }
+}

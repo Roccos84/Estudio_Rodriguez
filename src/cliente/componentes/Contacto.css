@@ -1,7 +1,7 @@
 .contactContainer {
     width: 100%;
     height: 100vh;
-    color: #fff;
+    color: #000;
 }
 
 .titleContact {
@@ -71,8 +71,7 @@ path {
     line-height: 50px;
 }
 
-.contactInfo a:hover,
-path:hover {
+.contactInfo a:hover {
     color: #b8860b;
     fill: #b8860b;
     text-decoration: underline;

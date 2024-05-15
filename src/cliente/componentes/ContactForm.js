@@ -1,6 +1,8 @@
 import './ContactForm.css';
 import React, { useState, useRef } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import Swal from 'sweetalert2';
+
 
 function ContactForm() {
     const captcha = useRef(null);
@@ -13,10 +15,10 @@ function ContactForm() {
 
     const endpoint = 'https://estudioservice.onrender.com';
 
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
 
 
 
@@ -42,25 +44,29 @@ function ContactForm() {
 
             });
 
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Su mensaje se ha enviado correctamente!',
+                showConfirmButton: false,
+                timer: 2000
+            })
 
-            if (response.ok) {
-                console.log('Correo electrónico enviado exitosamente');
-                setFormData({
-                    nombre: '',
-                    email: '',
-                    mensaje: ''
-                });
 
-                window.grecaptcha.reset();
-                // Realiza alguna acción adicional después de enviar el correo electrónico exitosamente
-            } else {
-                console.error('Error al enviar el correo electrónico');
-                // Maneja el error de envío de correo electrónico
-            }
+            setFormData({
+                nombre: '',
+                email: '',
+                mensaje: ''
+            });
+
+            window.grecaptcha.reset();
+            setBotonActivo(false);
+
+
 
         } catch (error) {
             console.error('Error en la solicitud de envío de correo electrónico', error);
-            // Maneja el error de solicitud
+
         }
     };
 

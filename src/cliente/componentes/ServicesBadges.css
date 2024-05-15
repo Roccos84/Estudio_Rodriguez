@@ -1,3 +1,25 @@
+.sc-aXZVg.szGVb h1,
+h3 {
+    color: #000;
+    font-family: inherit;
+}
+
+.sc-kpDqfm.lfa-Dxw p {
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+}
+
+
+.sc-eqUAAy.dzrza-D {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+}
+
 .badges {
     width: 350px;
     height: 350px;
@@ -7,7 +29,9 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
+
 }
+
 
 .badges h2 {
     padding-bottom: 5%;
@@ -31,7 +55,19 @@
 
 .badges a:hover {
     color: #b98400;
+    cursor: pointer;
 }
+
+
+
+.swal2-html-container p,
+.verMas,
+.swal2-popup {
+    color: #b98400;
+    font-weight: none;
+}
+
+
 
 @media screen and (max-width: 790px) {
     .badges {

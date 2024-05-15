@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './componentes/HomePage';
 import Navbar from './componentes/Navbar/Navbar';
 import Footer from './componentes/Footer';
+import WpButton from './componentes/wpButton';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path='/servicios' exact component={Servicios} />
             <Route path='/contacto' exact component={Contacto} />
           </Switch>
+          <WpButton />
           <Footer />
         </Router>
       </div>
